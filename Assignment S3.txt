@@ -1,0 +1,99 @@
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (js-assignments)
+$ git add README.txt
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (js-assignments)
+$ git commit -m "Added changes to README.txt"
+[js-assignments 0133dca] Added changes to README.txt
+ 1 file changed, 4 insertions(+)
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (js-assignments)
+$ git status
+On branch js-assignments
+nothing to commit, working tree clean
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (js-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master)
+$ git add README.txt
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master)
+$ git commit -m "changed line in README.txt"
+[master b8f746c] changed line in README.txt
+ 1 file changed, 4 insertions(+)
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master)
+$ git checkout js-assignments
+Switched to branch 'js-assignments'
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (js-assignments)
+$ git commit -m "Added changes to a1.js and a2.js"
+On branch js-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   a1.js
+        modified:   a2.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (js-assignments)
+$ git add *.js
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (js-assignments)
+$ git commit -m "Added changes to a1.js and a2.js"
+[js-assignments d6008fc] Added changes to a1.js and a2.js
+ 2 files changed, 8 insertions(+)
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (js-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master)
+$ git merge js-assignments
+Auto-merging README.txt
+CONFLICT (content): Merge conflict in README.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master|MERGING)
+$ git add README.txt
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master|MERGING)
+$ git commit -m " README.txt"
+[master 8cfeaf2]  README.txt
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master)
+$ git merge js-assignments
+Already up to date.
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master)
+$ git branch -D js-assignments
+Deleted branch js-assignments (was d6008fc).
+
+GIT REMOTING
+$ git push origin master
+Enumerating objects: 24, done.
+Counting objects: 100% (24/24), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (22/22), done.
+Writing objects: 100% (24/24), 2.38 KiB | 270.00 KiB/s, done.
+Total 24 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), done.
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/pia25saroj/A-0/pull/new/master
+remote:
+To https://github.com/pia25saroj/A-0.git
+ * [new branch]      master -> master
