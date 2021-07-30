@@ -1,0 +1,149 @@
+Priya Saroj@SAROJLAL MINGW64 ~
+$ mkdir Assignments
+
+Priya Saroj@SAROJLAL MINGW64 ~
+$ cd Assignments
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments
+$ git init
+Initialized empty Git repository in C:/Users/Priya Saroj/Assignments/.git/
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master)
+$ git congif --global user.username pia25saroj
+git: 'congif' is not a git command. See 'git --help'.
+
+The most similar command is
+        config
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master)
+$ git config --global user.username pia25saroj
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master)
+$ git remote add origin https://github.com/pia25saroj/A-0.git
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master)
+$ touch README.txt
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master)
+$ git add README.txt
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master)
+$ git commit -m "Added README.txt"
+[master (root-commit) bab604b] Added README.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.txt
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master)
+$ git branch html-assignments
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master)
+$ git checkout html-assignments
+Switched to branch 'html-assignments'
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (html-assignments)
+$ touch m1.html
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (html-assignments)
+$ touch m2.html
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (html-assignments)
+$ git status
+On branch html-assignments
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        m1.html
+        m2.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (html-assignments)
+$ git add *.html
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (html-assignments)
+$ git status
+On branch html-assignments
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   m1.html
+        new file:   m2.html
+
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (html-assignments)
+$ git commit -m "Added m1.html and m2.html"
+[html-assignments 94a82ae] Added m1.html and m2.html
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 m1.html
+ create mode 100644 m2.html
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (html-assignments)
+$ git status
+On branch html-assignments
+nothing to commit, working tree clean
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (html-assignments)
+$ git status
+On branch html-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   m1.html
+        modified:   m2.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (html-assignments)
+$ git commit -m "Added changes in m1.html and m2.html"
+On branch html-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   m1.html
+        modified:   m2.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (html-assignments)
+$ git add *.html
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (html-assignments)
+$ git commit -m "Added changes in m1.html and m2.html"
+[html-assignments 3090b5e] Added changes in m1.html and m2.html
+ 2 files changed, 22 insertions(+)
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (html-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master)
+$ git merge html-assignments
+Updating bab604b..3090b5e
+Fast-forward
+ m1.html | 11 +++++++++++
+ m2.html | 11 +++++++++++
+ 2 files changed, 22 insertions(+)
+ create mode 100644 m1.html
+ create mode 100644 m2.html
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master)
+$ git branch -d html-assignments
+Deleted branch html-assignments (was 3090b5e).
