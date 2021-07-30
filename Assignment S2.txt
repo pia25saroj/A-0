@@ -1,0 +1,170 @@
+Priya Saroj@SAROJLAL MINGW64 ~
+$ cd Assignments
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master)
+$ git branch css-assignments
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master)
+$ git checkout css-assignments
+Switched to branch 'css-assignments'
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ touch m3.css
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ touch m4.css
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ git status
+On branch css-assignments
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        m3.css
+        m4.css
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ git add *.css
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ git commit -m "Added m3.css and m4.css"
+[css-assignments bd27528] Added m3.css and m4.css
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 m3.css
+ create mode 100644 m4.css
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ touch m3.css
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ touch m4.css
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ git status
+On branch css-assignments
+nothing to commit, working tree clean
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ git add README.txt
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ git commit -m "changes made to README.txt"
+On branch css-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ git add README.txt
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ git status
+On branch css-assignments
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.txt
+
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ git checkout master
+Switched to branch 'master'
+M       README.txt
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master)
+$ git checkout css-assignments
+Switched to branch 'css-assignments'
+M       README.txt
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ git commit -m "Added changes to m3.css and m4.css"
+[css-assignments d0f5297] Added changes to m3.css and m4.css
+ 1 file changed, 17 insertions(+)
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        README.txt
+        m3.css
+        m4.css
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ git commit -m "changes made to README.txt"
+On branch css-assignments
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+        modified:   m3.css
+        modified:   m4.css
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ git add README.txt
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ git add *.css
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ git add *.html
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ git status
+On branch css-assignments
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.txt
+        modified:   m3.css
+        modified:   m4.css
+
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ git merge css-assignments
+Already up to date.
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ git branch -d css-assignments
+error: Cannot delete branch 'css-assignments' checked out at 'C:/Users/Priya Saroj/Assignments'
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ git checkout assignments
+error: pathspec 'assignments' did not match any file(s) known to git
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ git checkout Assignments
+error: pathspec 'Assignments' did not match any file(s) known to git
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        README.txt
+        m3.css
+        m4.css
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ git stash
+Saved working directory and index state WIP on css-assignments: d0f5297 Added changes to m3.css and m4.css
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (css-assignments)
+$ git checkout master
+Switched to branch 'master'
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master)
+$ git branch -d css-assignments
+error: The branch 'css-assignments' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D css-assignments'.
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master)
+$ git branch -D css-assignments
+Deleted branch css-assignments (was d0f5297).
+
+Priya Saroj@SAROJLAL MINGW64 ~/Assignments (master)
+$
